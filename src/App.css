@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -26,6 +26,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.img-section {
+  padding-top: 240px;
+}
+
+.img-holder {
+  border-top: solid 2px rgb(230, 216, 190);
+  border-bottom: solid 2px rgb(230, 216, 190);
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+}
+
+.carousel-img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
 }
 
 @keyframes App-logo-spin {
