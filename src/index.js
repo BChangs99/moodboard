@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 // React Router
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AlbumCovers from './routes/AlbumCovers';
+import AlbumCover from './routes/AlbumCover';
 import GraphicTees from './routes/GraphicTees';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +16,9 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}/>
-      <Route path="/album-covers" element={<AlbumCovers />}/>
+      <Route path="/album-covers" element={<AlbumCovers />}>
+        <Route path=":coverTitle" element={<AlbumCover />}/>
+      </Route>
       <Route path="/graphic-tees" element={<GraphicTees />}/>
       {/* "*" route is for urls that don't match any other paths */}
       <Route 
